@@ -158,12 +158,12 @@
         }
         if(tel == 1){
             document.getElementById('body').addEventListener('touchstart',function(e){
-                bx = e.clientX;
-                by = e.clientY;
+                bx = e.changedTouches[0].pageX;
+                by = e.changedTouches[0].pageY;
             },false);
             document.getElementById('body').addEventListener('touchend',function(e){
-                let ex = e.clientX;
-                let ey = e.clientY;
+                let ex = e.changedTouches[0].pageX;
+                let ey = e.changedTouches[0].pageY;
                 var dx = ex - bx;
                 var dy = ey - by;
                 
